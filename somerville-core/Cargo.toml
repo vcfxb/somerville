@@ -1,0 +1,11 @@
+[package]
+name = "somerville-core"
+version = "0.0.0"
+edition.workspace = true
+description = "The underlying implementation for the `somerville` crate."
+authors = ["Venus Xeon-Blonde"]
+license = "MIT"
+repository = "https://github.com/vcfxb/somerville"
+documentation = "https://docs.rs/somerville-core"
+
+[dependencies]

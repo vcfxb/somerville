@@ -4,8 +4,20 @@ version = "0.0.0"
 description = "An early-stage, work-in-progress, multi-media conversion application with graphical and command-line interfaces."
 authors = ["Venus Xeon-Blonde"]
 license = "MIT"
-reposirtory = "https://github.com/vcfxb/somerville"
+repository = "https://github.com/vcfxb/somerville"
 documentation = "https://docs.rs/somerville"
-edition = "2021"
+edition.workspace = true
+
+[workspace]
+package.edition = "2021"
 
 [dependencies]
+somerville-core = { path = "somerville-core", version = "0.0.0" }
+anyhow = "1.0.86"
+clap = "4.5.15"
+winit = { version = "0.30.5", optional = true }
+
+[features]
+default = ["gui"]
+gui = ["winit"]
+winit = ["dep:winit"]
